@@ -313,15 +313,15 @@ main {
               font-family: "Proxima Nova-Extrabold";
               color: $blue_fonts;
             }
-            p{
-              font-size: 16px;
-              font-family: "Proxima Nova";
-              color: #696969;
-            }
-            p:nth-child(1) {
+            h3 {
               font-size: 16px;
               font-family: "Proxima Nova-Bold";
               color: $grey;
+            }
+            p {
+              font-size: 16px;
+              font-family: "Proxima Nova";
+              color: #696969;
             }
 
           }

@@ -1,269 +1,440 @@
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/ProximaNova-Regular.ttf"); }
+  src: url("../fonts/ProximaNova-Regular.ttf");
+}
+
 @font-face {
   font-family: "Proxima Nova-Extrabold";
-  src: url("../fonts/ProximaNova-Extrabold.ttf"); }
+  src: url("../fonts/ProximaNova-Extrabold.ttf");
+}
+
 @font-face {
   font-family: "Proxima Nova-Semibold";
-  src: url("../fonts/ProximaNova-Semibold.ttf"); }
+  src: url("../fonts/ProximaNova-Semibold.ttf");
+}
+
 @font-face {
   font-family: "Proxima Nova-Bold";
-  src: url("../fonts/ProximaNova-Bold.ttf"); }
+  src: url("../fonts/ProximaNova-Bold.ttf");
+}
+
 @font-face {
   font-family: "Intro";
   src: url("../fonts/Intro.otf");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
+
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 body {
-  height: 100vh; }
+  height: 100vh;
+}
 
 .container {
   margin: 0 auto;
   padding: 0 20px;
   max-width: 1120px;
-  min-width: 600px; }
+  min-width: 600px;
+}
 
 nav .container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  height: fit-content; }
-  nav .container div div p {
-    padding: 26px 20px 26px 20px;
-    margin: 0; }
-    nav .container div div p a {
-      font-family: "Proxima Nova";
-      font-weight: bold;
-      color: #222B3A;
-      text-decoration: none;
-      font-size: 16px; }
-    nav .container div div p:nth-child(4) {
-      position: relative;
-      margin-left: 70px; }
-      nav .container div div p:nth-child(4)::before {
-        position: absolute;
-        content: url(../img/user.svg);
-        left: 0;
-        top: 28px; }
-    nav .container div div p:nth-child(1) {
-      position: relative; }
-      nav .container div div p:nth-child(1)::before {
-        position: absolute;
-        content: "";
-        left: 20px;
-        bottom: 0;
-        border-bottom: 2px solid #FC890D;
-        width: 62px; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+nav .container div div p {
+  padding: 26px 20px 26px 20px;
+  margin: 0;
+}
+
+nav .container div div p a {
+  font-family: "Proxima Nova";
+  font-weight: bold;
+  color: #222B3A;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav .container div div p:nth-child(4) {
+  position: relative;
+  margin-left: 70px;
+}
+
+nav .container div div p:nth-child(4)::before {
+  position: absolute;
+  content: url(../img/user.svg);
+  left: 0;
+  top: 28px;
+}
+
+nav .container div div p:nth-child(1) {
+  position: relative;
+}
+
+nav .container div div p:nth-child(1)::before {
+  position: absolute;
+  content: "";
+  left: 20px;
+  bottom: 0;
+  border-bottom: 2px solid #FC890D;
+  width: 62px;
+}
 
 header {
   background-color: #296DCE;
   min-height: 510px;
   position: relative;
-  overflow: hidden; }
-  header:before {
-    position: absolute;
-    content: url("../img/Vector 2.svg");
-    top: -20px;
-    left: 10%; }
-  header:after {
-    position: absolute;
-    content: url("../img/Vector 2.1.svg");
-    top: 50%;
-    right: 50%; }
-  header .container .main_header {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    min-height: 510px;
-    position: relative; }
-    header .container .main_header::after {
-      position: absolute;
-      content: url("../img/karpachoff.png");
-      bottom: -5px;
-      left: 60%; }
-    header .container .main_header h1 {
-      padding-top: 100px;
-      font-size: 38px;
-      font-family: "Intro";
-      color: white;
-      font-weight: normal; }
-      header .container .main_header h1 span {
-        color: #FF8A00;
-        font-size: 24px; }
-    header .container .main_header .button_course {
-      margin-top: 30px;
-      width: 209px;
-      height: 44px;
-      border: 1px solid white;
-      border-radius: 3px;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      header .container .main_header .button_course a {
-        text-decoration: none;
-        font-size: 14px;
-        font-family: "Proxima Nova";
-        font-weight: bold;
-        color: white; }
-    header .container .main_header .main_loading_line {
-      margin-top: 70px;
-      width: 470px;
-      height: 15px;
-      display: flex;
-      align-items: center;
-      border-radius: 3px;
-      background-color: #ffffff;
-      padding-left: 3px; }
-      header .container .main_header .main_loading_line div {
-        width: 60%;
-        height: 60%;
-        background-color: #296DCE;
-        border-radius: 3px; }
-    header .container .main_header .main_loading_text {
-      display: flex;
-      width: 470px;
-      height: 42px; }
-      header .container .main_header .main_loading_text div {
-        width: 60%; }
-        header .container .main_header .main_loading_text div:nth-child(2) {
-          width: 40%; }
-        header .container .main_header .main_loading_text div p {
-          display: flex;
+  overflow: hidden;
+}
+
+header:before {
+  position: absolute;
+  content: url("../img/Vector 2.svg");
+  top: -20px;
+  left: 10%;
+}
+
+header:after {
+  position: absolute;
+  content: url("../img/Vector 2.1.svg");
+  top: 50%;
+  right: 50%;
+}
+
+header .container .main_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 510px;
+  position: relative;
+}
+
+header .container .main_header::after {
+  position: absolute;
+  content: url("../img/karpachoff.png");
+  bottom: -5px;
+  left: 60%;
+}
+
+header .container .main_header h1 {
+  padding-top: 100px;
+  font-size: 38px;
+  font-family: "Intro";
+  color: white;
+  font-weight: normal;
+}
+
+header .container .main_header h1 span {
+  color: #FF8A00;
+  font-size: 24px;
+}
+
+header .container .main_header .button_course {
+  margin-top: 30px;
+  width: 209px;
+  height: 44px;
+  border: 1px solid white;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container .main_header .button_course a {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Proxima Nova";
+  font-weight: bold;
+  color: white;
+}
+
+header .container .main_header .main_loading_line {
+  margin-top: 70px;
+  width: 470px;
+  height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 3px;
+  background-color: #ffffff;
+  padding-left: 3px;
+}
+
+header .container .main_header .main_loading_line div {
+  width: 60%;
+  height: 60%;
+  background-color: #296DCE;
+  border-radius: 3px;
+}
+
+header .container .main_header .main_loading_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 470px;
+  height: 42px;
+}
+
+header .container .main_header .main_loading_text div {
+  width: 60%;
+}
+
+header .container .main_header .main_loading_text div:nth-child(2) {
+  width: 40%;
+}
+
+header .container .main_header .main_loading_text div p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
           flex-direction: row;
-          font-size: 38px;
-          font-family: "Proxima Nova";
-          font-weight: bold;
-          color: white; }
-          header .container .main_header .main_loading_text div p span {
-            font-size: 14px;
-            font-family: "Proxima Nova";
-            font-weight: normal;
-            color: white;
-            margin: 5px 10px 5px 10px; }
+  font-size: 38px;
+  font-family: "Proxima Nova";
+  font-weight: bold;
+  color: white;
+}
+
+header .container .main_header .main_loading_text div p span {
+  font-size: 14px;
+  font-family: "Proxima Nova";
+  font-weight: normal;
+  color: white;
+  margin: 5px 10px 5px 10px;
+}
 
 main section .container .navigation {
   min-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center; }
-  main section .container .navigation p {
-    font-size: 16px;
-    font-family: "Proxima Nova";
-    font-weight: bold;
-    color: #979FAD;
-    padding: 0 20px 0 0; }
-    main section .container .navigation p:nth-child(3) {
-      padding-left: 20px;
-      color: #222B3A; }
-    main section .container .navigation p:nth-child(2) {
-      padding-left: 20px;
-      position: relative; }
-      main section .container .navigation p:nth-child(2)::before {
-        position: absolute;
-        content: "";
-        top: 50%;
-        left: -10px;
-        border-bottom: 2px solid #979FAD;
-        width: 20px; }
-      main section .container .navigation p:nth-child(2)::after {
-        position: absolute;
-        content: "";
-        top: 50%;
-        right: -10px;
-        border-bottom: 2px solid #979FAD;
-        width: 20px; }
-main section:nth-child(2) {
-  background-color: #FAFAFA; }
-main section .container .course_topics {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 99px; }
-  main section .container .course_topics p {
-    font-size: 18px;
-    font-family: "Proxima Nova";
-    font-weight: bold;
-    color: #222B3A;
-    position: relative; }
-    main section .container .course_topics p:nth-child(1) {
-      margin-left: 30px; }
-      main section .container .course_topics p:nth-child(1)::before {
-        position: absolute;
-        content: "";
-        top: 50%;
-        left: -30px;
-        border-bottom: 2px solid #222B3A;
-        width: 20px; }
-  main section .container .course_topics .button_select_child_age {
-    width: 227px;
-    height: 44px;
-    border: 1.3px solid #FF8A00;
-    border-radius: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; }
-    main section .container .course_topics .button_select_child_age::after {
-      position: absolute;
-      content: url("../img/Polygon.svg");
-      top: 11px;
-      right: 15px; }
-    main section .container .course_topics .button_select_child_age a {
-      padding-right: 30px;
-      text-decoration: none;
-      font-size: 14px;
-      font-family: "Proxima Nova";
-      font-weight: bold;
-      color: #FF8A00; }
-main section .container .numerated_topics {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 203px);
-  grid-row-gap: 20px; }
-  main section .container .numerated_topics div {
-    display: flex; }
-    main section .container .numerated_topics div .topics_number {
-      font-size: 64px;
-      font-family: "Proxima Nova";
-      font-weight: bold;
-      color: #E1E1E1; }
-    main section .container .numerated_topics div div {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      max-width: 800px; }
-      main section .container .numerated_topics div div h2 {
-        font-size: 24px;
-        text-transform: uppercase;
-        font-family: "Proxima Nova-Extrabold";
-        color: #1092CB; }
-      main section .container .numerated_topics div div p {
-        font-size: 16px;
-        font-family: "Proxima Nova";
-        color: #696969; }
-      main section .container .numerated_topics div div p:nth-child(1) {
-        font-size: 16px;
-        font-family: "Proxima Nova-Bold";
-        color: #979FAD; }
-    main section .container .numerated_topics div .loading_line {
-      width: 15px;
-      height: 121px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      border-radius: 3px;
-      background-color: #F3F3F3; }
-      main section .container .numerated_topics div .loading_line div {
-        width: 60%;
-        height: 60%;
-        background-color: #0099DD;
-        border-radius: 3px; }
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
+main section .container .navigation p {
+  font-size: 16px;
+  font-family: "Proxima Nova";
+  font-weight: bold;
+  color: #979FAD;
+  padding: 0 20px 0 0;
+}
+
+main section .container .navigation p:nth-child(3) {
+  padding-left: 20px;
+  color: #222B3A;
+}
+
+main section .container .navigation p:nth-child(2) {
+  padding-left: 20px;
+  position: relative;
+}
+
+main section .container .navigation p:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -10px;
+  border-bottom: 2px solid #979FAD;
+  width: 20px;
+}
+
+main section .container .navigation p:nth-child(2)::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: -10px;
+  border-bottom: 2px solid #979FAD;
+  width: 20px;
+}
+
+main section:nth-child(2) {
+  background-color: #FAFAFA;
+}
+
+main section .container .course_topics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 99px;
+}
+
+main section .container .course_topics p {
+  font-size: 18px;
+  font-family: "Proxima Nova";
+  font-weight: bold;
+  color: #222B3A;
+  position: relative;
+}
+
+main section .container .course_topics p:nth-child(1) {
+  margin-left: 30px;
+}
+
+main section .container .course_topics p:nth-child(1)::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -30px;
+  border-bottom: 2px solid #222B3A;
+  width: 20px;
+}
+
+main section .container .course_topics .button_select_child_age {
+  width: 227px;
+  height: 44px;
+  border: 1.3px solid #FF8A00;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+main section .container .course_topics .button_select_child_age::after {
+  position: absolute;
+  content: url("../img/Polygon.svg");
+  top: 11px;
+  right: 15px;
+}
+
+main section .container .course_topics .button_select_child_age a {
+  padding-right: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Proxima Nova";
+  font-weight: bold;
+  color: #FF8A00;
+}
+
+main section .container .numerated_topics {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (203px)[6];
+      grid-template-rows: repeat(6, 203px);
+  grid-row-gap: 20px;
+}
+
+main section .container .numerated_topics div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main section .container .numerated_topics div .topics_number {
+  font-size: 64px;
+  font-family: "Proxima Nova";
+  font-weight: bold;
+  color: #E1E1E1;
+}
+
+main section .container .numerated_topics div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 800px;
+}
+
+main section .container .numerated_topics div div h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: "Proxima Nova-Extrabold";
+  color: #1092CB;
+}
+
+main section .container .numerated_topics div div h3 {
+  font-size: 16px;
+  font-family: "Proxima Nova-Bold";
+  color: #979FAD;
+}
+
+main section .container .numerated_topics div div p {
+  font-size: 16px;
+  font-family: "Proxima Nova";
+  color: #696969;
+}
+
+main section .container .numerated_topics div .loading_line {
+  width: 15px;
+  height: 121px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-radius: 3px;
+  background-color: #F3F3F3;
+}
+
+main section .container .numerated_topics div .loading_line div {
+  width: 60%;
+  height: 60%;
+  background-color: #0099DD;
+  border-radius: 3px;
+}
 /*# sourceMappingURL=course.css.map */
